@@ -9,37 +9,36 @@
 </template>
 
 <script>
-    import {
-        mapGetters,
-        mapActions
-    } from 'vuex'
+import { mapGetters, mapActions } from "vuex";
 
-    export default {
-        name: 'info',
-        data() {
-            return {}
-        },
-        methods: {
-            ...mapActions(['clearAllCart'])
-        },
-        computed:{
-            ...mapGetters(['totalPrice','totalNum'])
-        }
-    
+export default {
+  name: "info",
+  data() {
+    return {};
+  },
+  methods: {
+    clearAllCart() {
+        this.$store.dispatch('clearAllCart')
     }
+    // ...mapActions(['clearAllCart'])
+  },
+  computed: {
+    ...mapGetters(["totalPrice", "totalNum"])
+  }
+};
 </script>
 
 <style scoped>
-    .item-wrapper {
-        display: flex;
-        background-color: #dfdfdf;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .item {
-        flex: 1;
-    }
+.item-wrapper {
+  display: flex;
+  background-color: #dfdfdf;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  flex: 1;
+}
 </style>
 
 </style>

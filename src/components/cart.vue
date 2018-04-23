@@ -40,6 +40,9 @@
         data() {
             return {}
         },
+        mounted() {
+            console.log(this.cartProducts);
+        },
         computed: {
             ...mapGetters(['cartProducts'])
         },
